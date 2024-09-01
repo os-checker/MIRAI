@@ -11,8 +11,8 @@ WORKDIR /MIRAI
 
 # 1. set up cargo env
 # 2. install toolchain required in MIRAI repo and install MIRAI itself
-# 3. clean /MIRAI dir
-RUN . ~/.bashrc && rustup show && ./install_mirai.sh && cd / && rm /MIRAI
+# 3. clean cargo artifacts
+RUN . ~/.bashrc && rustup show && ./install_mirai.sh && cargo clean
 
 ENTRYPOINT ["bash", "-l", "-c"]
 CMD ["cargo mirai --help"]
