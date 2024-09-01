@@ -1,0 +1,13 @@
+name: Docker Image
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Build and Run Docer Image
+      run: |
+        docker build -t MIRAI .
+        docker run MIRAI
