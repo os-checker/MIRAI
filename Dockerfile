@@ -10,7 +10,7 @@ COPY . /MIRAI
 WORKDIR /MIRAI
 
 # install toolchain required in MIRAI repo and install MIRAI itself
-RUN . "$HOME/.cargo/env" && rustup show && ./install_mirai.sh
+RUN . ~/.bashrc && rustup show && ./install_mirai.sh
 
 ENTRYPOINT ["bash", "-l", "-c"]
 CMD ["cargo mirai --help"]

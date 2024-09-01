@@ -49,4 +49,4 @@ jobs:
         docker image ls -a
 
     - name: Run Docker Image
-      run: docker run -e CARGO_TERM_COLOR=always ${{ env.IMAGE }}
+      run: docker run ${{ env.IMAGE }}
