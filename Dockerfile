@@ -9,4 +9,7 @@ COPY . /MIRAI
 
 WORKDIR /MIRAI
 
+# install toolchain required in MIRAI repo
+RUN rustup show
+
 RUN ["./install_mirai.sh"]
