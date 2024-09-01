@@ -1,5 +1,9 @@
 name: Docker Image
 
+on:
+  push:
+    branches: [os-checker]
+
 jobs:
   build:
     runs-on: ubuntu-latest
