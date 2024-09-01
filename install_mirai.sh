@@ -9,6 +9,8 @@
 # Exit immediately if a command exits with a non-zero status.
 set -e
 
+. "$HOME/.cargo/env"
+
 #install mirai into cargo
 cargo uninstall -q mirai || true
 touch checker/src/lib.rs
@@ -19,4 +21,3 @@ if [ "$1" == "vcpkg" ]; then
 else
   cargo install --locked --path ./checker
 fi
-
