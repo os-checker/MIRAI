@@ -11,4 +11,4 @@ WORKDIR /MIRAI
 # install toolchain required in MIRAI repo
 RUN . "$HOME/.cargo/env" && rustup show
 
-RUN ["./install_mirai.sh"]
+CMD ["./install_mirai.sh"]
