@@ -3,6 +3,10 @@ name: Docker Image
 on:
   push:
     branches: [os-checker]
+    paths:
+      - annotations/**
+      - checker/**
+      - standard_contracts/**
 
 env:
   IMAGE: ${{ secrets.DOCKERHUB_USERNAME }}/mirai:latest
